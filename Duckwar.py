@@ -206,7 +206,7 @@ while Level < 22:
 	while Counter < MaxCounter:
 		Enemy=Enemylist[Counter].rstrip()
 		Enemylevel=int(Enemy)
-		NumerofRepeats=int((Level*2) / Enemylevel)
+		NumerofRepeats=int(Level / Enemylevel)
 		if NumerofRepeats > 10:
 			NumerofRepeats=0
 		if not NumerofRepeats == 0:
