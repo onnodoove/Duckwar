@@ -49,7 +49,7 @@ Sizzle=pygame.mixer.Sound('Meow.wav')
 Yay=pygame.mixer.Sound('Yay.ogg')
 Teleport=pygame.mixer.Sound('Teleport.ogg')
 Victory=pygame.mixer.Sound('Victory.ogg')
-Hurt=pygame.mixer.Sound('Quack.wav')
+Hurt=pygame.mixer.Sound('Hurt.wav')
 Yeah=pygame.mixer.Sound('Yeah.ogg')
 
 CatSmall=pygame.image.load('CatSmall.png')
@@ -1497,7 +1497,7 @@ while Level < 31:
 							Status=SetStatus()
 							DoScreen(ScreenRange, Move, Level, PlayerLevel, Exp, ExpNeeded, Status, EnemyStatus)
 							if PlayerHull <= 0:
-								Vaporize.play()
+								Blast.play()
 								Status='Player destroyed by '+EnemyName+' laser'
 								VisualScan(Stars, Asteroids, Enemies, MissilePosX, MissilePosY, ExplosionX, ExplosionY)
 								DoScreen(ScreenRange, Move, Level, PlayerLevel, Exp, ExpNeeded, Status, EnemyStatus)
@@ -1508,7 +1508,7 @@ while Level < 31:
 								if PlayerHull<(PlayerLevel*50):
 									Hurt.play()
 								else:
-									Laser.play()
+									Beep.play()
 							Status=str(EnemyName).rstrip()+' fires laser...'
 							LaserFired=True
 					if ((-20) <= XDiff) and ( XDiff <= 20) and ((-20) <= YDiff) and (YDiff <= 20) and running==True:
