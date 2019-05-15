@@ -928,7 +928,7 @@ def FireLaser (Enemies, Stars, Asteroids, LaserTarget, PlayerLevel, Exp, Nexp):
 	EnemyHull=EnemyHull-PlayerLaserDamage
 	Enemies[LaserTarget+6]=EnemyHull
 	if EnemyHull < 1:
-		Vaporize.play()
+		Blast.play()
 #		print(str(EnemyName).rstrip(), 'destroyed by laser...')
 		EnemyXp=int(Enemies[LaserTarget])
 		EnemyKills=EnemyKills+EnemyXp
@@ -939,7 +939,7 @@ def FireLaser (Enemies, Stars, Asteroids, LaserTarget, PlayerLevel, Exp, Nexp):
 			del Enemies[LaserTarget]
 			Counter=Counter+1
 	else:
-		Laser.play()
+		Beep.play()
 #		print(str(EnemyName).rstrip(), 'hit by laser for ', PlayerLaserDamage, ' damage...')
 	return(Enemies, Exp)
 
